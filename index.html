@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<title>无标题文档</title>
+<script type="text/javascript" src="js/zepto/zepto.js"></script>
+        <script type="text/javascript" src="js/zepto/event.js"></script>
+        <script type="text/javascript" src="js/zepto/ajax.js"></script>
+        <script type="text/javascript" src="js/zepto/selector.js"></script>
+        <script type="text/javascript" src="js/zepto/detect.js"></script>
+        <script type="text/javascript" src="js/zepto/fx.js"></script>
+        <script type="text/javascript" src="js/touch.js"></script>
+        <script type="text/javascript" src="js/ppt.js"></script>
+        <script>
+			$("html").css("font-size",$(window).width()/10);
+		</script>
+        <style>
+        	*{
+				padding:0px;
+				margin:0px;
+				outline:none;
+				color:#000;
+				border:0px;
+				}
+			#app{
+				width:10rem;
+				overflow:hidden;
+				position:relative;}
+			#roll{
+				width:10rem;
+				position:absolute;
+				left:0px;
+				}
+			.page{
+				width:10rem;
+				background-repeat:no-repeat;
+				background-size:cover;
+				position:relative;}
+			.child{
+				position:absolute;
+				font-size:1rem;
+				line-height:1rem;
+				font-family:微软雅黑;
+				}
+        </style>
+</head>
+<body>
+<div id="app">
+	<div id="roll">
+    	<div class="page" style="background-image:url(images/pageA.jpg)">
+        	<div class="child" style="top:10%;left:5%;background-color:rgba(0,121,220,0.35); font-size:1.5rem; line-height:1.5rem;padding:.2rem;">不花钱</div>
+            <div class="child" style="top:23%;left:5%;background-color:rgba(0,121,220,0.35); font-size:.7rem; line-height:.7rem;padding:.2rem;">送你互联网旅游“俱乐部”</div>
+        </div>
+        <div class="page" style="background-image:url(images/pageB.jpg)">
+        	<img class="child" src="images/pic1.jpg" style="top:15%;left:5%;width:90%;height:30%"/>
+            <div class="child" style="padding:4.2%; background-color:rgba(255,255,255,0.3); text-align:center; font-size:.6rem; line-height:.6rem;top:50%;left:5%;">
+            	<span style="color:#FF7600; font-size:.9rem; line-height:1rem;">想做旅游</span>
+                <br/><br/>
+                <span>租房、水电、员工、办执照！</span>
+                <br/><br/>
+                <span>太多麻烦，太多费用！</span>
+            </div>
+        </div>
+        <div class="page" style="background-image:url(images/pageC.jpg)">
+        	<div class="child" style="width:70%;padding:3%;background-color:rgba(255,255,255,0.3);top:10%;right:0; font-size:.6rem; line-height:.7rem;">
+            	<span style="font-size:1rem; line-height:1.1rem;">旅博汇旅行网</span>
+                <br/>
+                <br/>
+                是一个专为各类个性旅游爱好者开辟的旅游平台，只要你有想法，只要你有朋友，不用投入费用，只要投入人脉，就可以拥有属于自己的网上私人旅游会所！
+            </div>
+        </div>
+        <div class="page" style="background-image:url(images/pageD.jpg)">
+        	<div class="child" style="width:82%;padding:3%; background-color:rgba(255,255,255,0.6); top:10%; left: 7%; font-size:.8rem; color:rgb(255, 84, 0); z-index:1;">
+            	<span style="font-size:1rem; line-height:1.1rem; color:rgb(255, 84, 0);">适合人群</span>
+                <br/><br/>
+                热爱旅游，不爱坐班，
+                <br/>
+                崇尚自由、勇于创业、
+                <br/>
+                时间碎片化的人。
+                <br/>
+                这是一个可以轻松积攒财富的事业！
+            </div>
+            <img class="child" src="images/pic2.jpg" style="width:100%;height:50%;bottom:0;left:0;"/>
+            <img class="child" src="images/logo.png" style="width:25%;height:8%;top:12%;left:60%; z-index:2;"/>
+        </div>
+        <div class="page" style="background-image:url(images/pageE.jpg)">
+        	<img class="child" src="images/pic3.jpg" style="width:100%;height:30%;top:10%;left:0px;"/>
+            <div class="child" style="text-align:center; font-size:.6rem; line-height:.7rem;top:46%;left:0;width:100%;">
+            	<span style="font-size:1rem; line-height:1.1rem;">如何成为旅游达人</span>
+                <br/><br/>
+                请点击随后发给你的
+                <br/>
+                “用户注册——旅博汇”的链接。
+                <br/>
+                并请关注旅博汇
+                <br/>
+                www.lvbh.cn
+            </div>
+        </div>
+        <div class="page" style="background-image:url(images/pageF.jpg)">
+        	<img class="child" src="images/pic4.jpg" style="width:80%;height:40%;top:10%;left:10%;"/>
+            <div class="child" style="font-size:.5rem; line-height:.6rem;color:#fff;top:55%;left:10%;width:80%;">
+            <span style="font-size:.6rem; line-height:1rem;color:#FFFFFF;">如何邀请您的朋友加入圈子</span>
+            <br/>
+            1、电脑上登录会员
+            <br/>
+            2、点击进入“我的旅博汇”
+            <br/>
+            3、点击进入“我的账号”
+            <br/>
+            4、手机扫描“邀请二维码”
+            <br/>
+            5、发送二维码链接给你想邀请加入你圈子的朋友
+            <br/>
+            6、根据电脑上提示，完善您本人的会员资料
+            </div>
+        </div>
+        <div class="page" style="background-image:url(images/pageG.jpg)">
+        	<img class="child" src="images/logo.png" style="width:30%;height:10%;top:10%;left:35%;"/>
+            <div class="child" style="font-size:.8rem; line-height:.8rem;padding:.3rem; text-align:center; color:#134AA0;top:40%;
+            left:10%; background-color:rgba(255,255,255,0.3);">玩着玩着就赚了！</div>
+            <div class="child" style=" text-align:center;width:80%; background-color:rgba(255,255,255,0.3);left:10%;bottom:5%; color:#FF4700;padding-top:3%;padding-bottom:3%; line-height:1.2rem;">
+            旅博汇旅行网
+            <br/>
+            www.lvbh.cn
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+app.run();
+$(window).on("touchmove",function(e){
+	if ( e && e.stopPropagation ){
+//因此它支持W3C的stopPropagation()方法
+e.stopPropagation(); }
+else{
+//否则，我们需要使用IE的方式来取消事件冒泡 
+window.event.cancelBubble = true;
+return false;}
+	//如果提供了事件对象，则这是一个非IE浏览器 
+if ( e && e.preventDefault ){ 
+//阻止默认浏览器动作(W3C) 
+e.preventDefault(); }
+else{
+//IE中阻止函数器默认动作的方式 
+window.event.returnValue = false; 
+return false;}
+	})
+$(window).on("swipeup",function(e){
+		if ( e && e.stopPropagation ){
+//因此它支持W3C的stopPropagation()方法
+e.stopPropagation(); }
+else{
+//否则，我们需要使用IE的方式来取消事件冒泡 
+window.event.cancelBubble = true;
+return false;}
+	//如果提供了事件对象，则这是一个非IE浏览器 
+if ( e && e.preventDefault ){ 
+//阻止默认浏览器动作(W3C) 
+e.preventDefault(); }
+else{
+//IE中阻止函数器默认动作的方式 
+window.event.returnValue = false; 
+return false;}
+	app.up();
+	});
+$(window).on("swipedown",function(e){
+		if ( e && e.stopPropagation ){
+//因此它支持W3C的stopPropagation()方法
+e.stopPropagation(); }
+else{
+//否则，我们需要使用IE的方式来取消事件冒泡 
+window.event.cancelBubble = true;
+return false;}
+	//如果提供了事件对象，则这是一个非IE浏览器 
+if ( e && e.preventDefault ){ 
+//阻止默认浏览器动作(W3C) 
+e.preventDefault(); }
+else{
+//IE中阻止函数器默认动作的方式 
+window.event.returnValue = false; 
+return false;}
+	app.down();
+	});
+</script>
+<audio autoplay>
+  <source src="music/a.OGG" type="audio/ogg">
+  <source src="music/a.mp3" type="audio/mpeg">
+</audio>
+</body>
+</html>
