@@ -20,6 +20,14 @@ module.exports = function(grunt){
 			html:{src: ['index.html'], dest: 'dist/index.html'},
 			music:{expand: true, src: ['music/**/*'], dest: 'dist'}
 			},
+		cssmin: {
+            options: {                                       //配置
+                stripBanners:true,
+                banner: '/*! This is the grunt test ' +      //添加自定义的banner
+                '<%= grunt.template.today("yyyy-mm-dd") %> */'
+            },
+            basic: {expand: true, cwd: 'css', src: ['*.css'], dest: 'dist/css'}
+        },
         uglify: {
             options: {
                 banner: '/*! This is uglify test - ' +
@@ -47,5 +55,5 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
 	grunt.loadNpmTasks("grunt-contrib-cssmin");
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
-    grunt.registerTask('default', ['jshint','clean','copy','uglify','imagemin']);
+    grunt.registerTask('default', ['jshint','clean','copy','cssmin','uglify','imagemin']);
 }

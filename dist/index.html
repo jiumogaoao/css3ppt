@@ -8,6 +8,7 @@
         <script>
 			$("html").css("font-size",$(window).width()/10);
 		</script>
+        <link href="css/animate.css" type="text/css" rel="stylesheet" rev="stylesheet" media="screen"/>
         <style>
         	*{
 				padding:0px;
@@ -19,7 +20,10 @@
 			#app{
 				width:10rem;
 				overflow:hidden;
-				position:relative;}
+				position:relative;
+				transform: translate3d(0px, 0px, 0px);
+  				-webkit-transform: translate3d(0px, 0px, 0px);
+				}
 			#roll{
 				width:10rem;
 				position:absolute;
@@ -36,18 +40,30 @@
 				line-height:1rem;
 				font-family:微软雅黑;
 				}
+			#bottomButton{
+				position:absolute;
+				bottom:5%;
+				width:10%;
+				left:45%;
+				}
+			.music{
+				position:absolute;
+				top:2%;
+				right:1%;
+				width:50%}
         </style>
+         
 </head>
 <body>
 <div id="app">
 	<div id="roll">
     	<div class="page" style="background-image:url(images/pageA.jpg)">
-        	<div class="child" style="top:10%;left:5%;background-color:rgba(0,121,220,0.35); font-size:1.5rem; line-height:1.5rem;padding:.2rem;">不花钱</div>
-            <div class="child" style="top:23%;left:5%;background-color:rgba(0,121,220,0.35); font-size:.7rem; line-height:.7rem;padding:.2rem;">送你互联网旅游“俱乐部”</div>
+        	<div class="child" style="top:10%;left:5%;background-color:rgba(0,121,220,0.35); font-size:1.5rem; line-height:1.5rem;padding:.2rem;" inAn="animating fade-in-down" onAn="" outAn="animating fade-out">不花钱</div>
+            <div class="child" style="top:23%;left:5%;background-color:rgba(0,121,220,0.35); font-size:.7rem; line-height:.7rem;padding:.2rem;" inAn="animating fade-in-down" onAn="" outAn="animating fade-out">送你互联网旅游“俱乐部”</div>
         </div>
         <div class="page" style="background-image:url(images/pageB.jpg)">
-        	<img class="child" src="images/pic1.jpg" style="top:15%;left:5%;width:90%;height:30%"/>
-            <div class="child" style="padding:4.2%; background-color:rgba(255,255,255,0.3); text-align:center; font-size:.6rem; line-height:.6rem;top:50%;left:5%;">
+        	<img class="child" src="images/pic1.jpg" style="top:15%;left:5%;width:90%;height:30%" inAn="animating panic" onAn="" outAn="animating fade-out"/>
+            <div class="child" style="padding:4.2%; background-color:rgba(255,255,255,0.3); text-align:center; font-size:.6rem; line-height:.6rem;top:50%;left:5%;" inAn="animating fade-in-up" onAn="" outAn="animating fade-out">
             	<span style="color:#FF7600; font-size:.9rem; line-height:1rem;">想做旅游</span>
                 <br/><br/>
                 <span>租房、水电、员工、办执照！</span>
@@ -56,7 +72,7 @@
             </div>
         </div>
         <div class="page" style="background-image:url(images/pageC.jpg)">
-        	<div class="child" style="width:70%;padding:3%;background-color:rgba(255,255,255,0.3);top:10%;right:0; font-size:.6rem; line-height:.7rem;">
+        	<div class="child" style="width:70%;padding:3%;background-color:rgba(255,255,255,0.3);top:10%;right:0; font-size:.6rem; line-height:.7rem;" inAn="animating pulse" onAn="" outAn="animating fade-out">
             	<span style="font-size:1rem; line-height:1.1rem;">旅博汇旅行网</span>
                 <br/>
                 <br/>
@@ -64,7 +80,7 @@
             </div>
         </div>
         <div class="page" style="background-image:url(images/pageD.jpg)">
-        	<div class="child" style="width:82%;padding:3%; background-color:rgba(255,255,255,0.6); top:10%; left: 7%; font-size:.8rem; color:rgb(255, 84, 0); z-index:1;">
+        	<div class="child" style="width:82%;padding:3%; background-color:rgba(255,255,255,0.6); top:10%; left: 7%; font-size:.8rem; color:rgb(255, 84, 0); z-index:1;" inAn="animating wobble" onAn="" outAn="animating fade-out">
             	<span style="font-size:1rem; line-height:1.1rem; color:rgb(255, 84, 0);">适合人群</span>
                 <br/><br/>
                 热爱旅游，不爱坐班，
@@ -75,12 +91,12 @@
                 <br/>
                 这是一个可以轻松积攒财富的事业！
             </div>
-            <img class="child" src="images/pic2.jpg" style="width:100%;height:50%;bottom:0;left:0;"/>
-            <img class="child" src="images/logo.png" style="width:25%;height:8%;top:12%;left:60%; z-index:2;"/>
+            <img class="child" src="images/pic2.jpg" style="width:100%;height:50%;bottom:0;left:0;" inAn="animating slingshot-reverse" onAn="" outAn="animating fade-out"/>
+            <img class="child" src="images/logo.png" style="width:25%;height:8%;top:12%;left:60%; z-index:2;" inAn="animating slingshot" onAn="" outAn="animating fade-out"/>
         </div>
         <div class="page" style="background-image:url(images/pageE.jpg)">
-        	<img class="child" src="images/pic3.jpg" style="width:100%;height:30%;top:10%;left:0px;"/>
-            <div class="child" style="text-align:center; font-size:.6rem; line-height:.7rem;top:46%;left:0;width:100%;">
+        	<img class="child" src="images/pic3.jpg" style="width:100%;height:30%;top:10%;left:0px;" inAn="animating swing" onAn="" outAn="animating fade-out"/>
+            <div class="child" style="text-align:center; font-size:.6rem; line-height:.7rem;top:46%;left:0;width:100%;" inAn="animating rubber-band" onAn="" outAn="animating fade-out">
             	<span style="font-size:1rem; line-height:1.1rem;">如何成为旅游达人</span>
                 <br/><br/>
                 请点击随后发给你的
@@ -93,8 +109,8 @@
             </div>
         </div>
         <div class="page" style="background-image:url(images/pageF.jpg)">
-        	<img class="child" src="images/pic4.jpg" style="width:80%;height:40%;top:10%;left:10%;"/>
-            <div class="child" style="font-size:.5rem; line-height:.6rem;color:#fff;top:55%;left:10%;width:80%;">
+        	<img class="child" src="images/pic4.jpg" style="width:80%;height:40%;top:10%;left:10%;" inAn="animating tada" onAn="" outAn="animating fade-out"/>
+            <div class="child" style="font-size:.5rem; line-height:.6rem;color:#fff;top:55%;left:10%;width:80%;" inAn="animating bounce" onAn="" outAn="animating fade-out">
             <span style="font-size:.6rem; line-height:1rem;color:#FFFFFF;">如何邀请您的朋友加入圈子</span>
             <br/>
             1、电脑上登录会员
@@ -111,16 +127,17 @@
             </div>
         </div>
         <div class="page" style="background-image:url(images/pageG.jpg)">
-        	<img class="child" src="images/logo.png" style="width:30%;height:10%;top:10%;left:35%;"/>
+        	<img class="child" src="images/logo.png" style="width:30%;height:10%;top:10%;left:35%;" inAn="animating shake-y" onAn="" outAn="animating fade-out"/>
             <div class="child" style="font-size:.8rem; line-height:.8rem;padding:.3rem; text-align:center; color:#134AA0;top:40%;
-            left:10%; background-color:rgba(255,255,255,0.3);">玩着玩着就赚了！</div>
-            <div class="child" style=" text-align:center;width:80%; background-color:rgba(255,255,255,0.3);left:10%;bottom:5%; color:#FF4700;padding-top:3%;padding-bottom:3%; line-height:1.2rem;">
+            left:10%; background-color:rgba(255,255,255,0.3);" inAn="animating flash" onAn="infinite heartbeat" outAn="animating fade-out">玩着玩着就赚了！</div>
+            <div class="child" style=" text-align:center;width:80%; background-color:rgba(255,255,255,0.3);left:10%;bottom:5%; color:#FF4700;padding-top:3%;padding-bottom:3%; line-height:1.2rem;" inAn="animating flip-in-right-back" onAn="" outAn="animating fade-out">
             旅博汇旅行网
             <br/>
             www.lvbh.cn
             </div>
         </div>
     </div>
+    <img class="infinite animating fade-in-up" id="bottomButton" src="images/arrow.png"/>
 </div>
 <script>
 app.run();
@@ -178,9 +195,30 @@ return false;}
 	app.down();
 	});
 </script>
-<audio autoplay>
-  <source src="music/a.OGG" type="audio/ogg">
+<div class="music">
+				<img src="images/music_play.png" style="width: 100%">
+				<audio id="video" autoplay loop style="display:none;">
+					<source src="music/a.OGG" type="audio/ogg">
   <source src="music/a.mp3" type="audio/mpeg">
-</audio>
+					</audio>
+				</div>
 </body>
+<script>
+;(function(){
+	var myVideo = document.getElementById("video");
+	var open=0;
+	$(".music").unbind("tap").bind("tap",function(){
+		if(open){
+			open=0;
+			myVideo.play();
+			$(".music img").attr("src","images/music_play.png");
+			}else{
+				open=1;
+				myVideo.pause();
+				$(".music img").attr("src","images/music_stopv2.png");
+				}
+		})
+	})();
+	
+</script>
 </html>
